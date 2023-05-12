@@ -9,7 +9,7 @@ resource "azurerm_kubernetes_cluster" "aks_cluster" {
 
   default_node_pool {
     name       = "systempool"
-    vm_size    = "standard_ds11"
+    vm_size    = "Standard_D2ads_v5"
     orchestrator_version = data.azurerm_kubernetes_service_versions.current.latest_version
     availability_zones   = [1, 2, 3]
     enable_auto_scaling  = true
